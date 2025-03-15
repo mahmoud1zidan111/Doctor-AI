@@ -1,0 +1,542 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(252, 248, 219);
+}
+section .contenr {
+  width: 60%;
+  margin: 0% 20%;
+  padding: 0% 15%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+section .contenr .welcome {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 25px;
+}
+section .contenr .input {
+  display: flex;
+  flex-direction: column;
+}
+section .contenr .input #Email,
+#pass {
+  padding: 15px 8px;
+  outline: none;
+  border-radius: 9px;
+  border: 0.5px solid black;
+}
+#Email {
+  margin-bottom: 20px;
+}
+#pass {
+  margin-bottom: 15px;
+}
+label {
+  margin-bottom: 8px;
+}
+.check .forgit .checkbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0px;
+}
+.check .forgit .checkbox a h4 {
+  justify-content: end;
+}
+.check .forgit .checkbox label p {
+  margin-right: 140px;
+}
+.check .forgit .checkbox input {
+  padding: 5px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+}
+.check .forgit .login button {
+  width: 100%;
+  padding: 14px 0px;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  background-color: #4e4ee2;
+  color: #ffff;
+  transition: 0.4s;
+}
+.check .forgit .login button:hover {
+  background-color: #6363e6;
+  border: 0.8px solid black;
+}
+.bottom-section .fac_gol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 0px;
+}
+.bottom-section .fac_gol a {
+  width: 100%;
+  padding: 13px 5px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#face {
+  margin-bottom: 12px;
+  background-color: #4e4ee2;
+  color: #ffff;
+}
+#face i {
+  padding: 0px 15px;
+}
+#Google i {
+  padding: 0px 15px;
+}
+.bottom-section .fac_gol a:hover {
+  opacity: 0.85;
+}
+.no-acuon {
+  width: 99%;
+}
+.no-acuon P a {
+  margin-left: 160px;
+}
+@media (max-width: 400px) {
+  section {
+    width: 100%;
+    height: 100vh;
+    padding: 0% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 50px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 8px;
+  }
+  #Email {
+    margin-bottom: 12px;
+  }
+  #pass {
+    margin-bottom: 12px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 80px;
+  }
+}
+@media (max-width: 500px) {
+  section {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 10% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 50px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 8px;
+  }
+  #Email {
+    margin-bottom: 12px;
+  }
+  #pass {
+    margin-bottom: 12px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 80px;
+  }
+}
+@media (max-width: 600px) {
+  section {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 10% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 50px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 8px;
+  }
+  #Email {
+    margin-bottom: 12px;
+  }
+  #pass {
+    margin-bottom: 12px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 80px;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 15% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 120px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 5px;
+  }
+  .check .forgit .login button {
+    width: 100%;
+    margin: 2% 0%;
+    padding: 14px 0px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-color: #4e4ee2;
+    color: #ffff;
+    transition: 0.4s;
+  }
+  .check .forgit .login button:hover {
+    background-color: #6363e6;
+    border: 0.8px solid black;
+  }
+  #Email {
+    margin-bottom: 20px;
+  }
+  #pass {
+    margin-bottom: 20px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 120px;
+  }
+  #face {
+    margin-bottom: 30px;
+  }
+  #Google {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 800px) {
+  section {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 15% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 120px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 5px;
+  }
+  .check .forgit .login button {
+    width: 100%;
+    margin: 2% 0%;
+    padding: 14px 0px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-color: #4e4ee2;
+    color: #ffff;
+    transition: 0.4s;
+  }
+  .check .forgit .login button:hover {
+    background-color: #6363e6;
+    border: 0.8px solid black;
+  }
+  #Email {
+    margin-bottom: 20px;
+  }
+  #pass {
+    margin-bottom: 20px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 120px;
+  }
+  #face {
+    margin-bottom: 30px;
+  }
+  #Google {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 900px) {
+  section {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 15% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 120px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 5px;
+  }
+  .check .forgit .login button {
+    width: 100%;
+    margin: 2% 0%;
+    padding: 14px 0px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-color: #4e4ee2;
+    color: #ffff;
+    transition: 0.4s;
+  }
+  .check .forgit .login button:hover {
+    background-color: #6363e6;
+    border: 0.8px solid black;
+  }
+  #Email {
+    margin-bottom: 20px;
+  }
+  #pass {
+    margin-bottom: 20px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 120px;
+  }
+  #face {
+    margin-bottom: 30px;
+  }
+  #Google {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  section {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    padding: 15% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 120px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 5px;
+  }
+  .check .forgit .login button {
+    width: 100%;
+    margin: 2% 0%;
+    padding: 14px 0px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-color: #4e4ee2;
+    color: #ffff;
+    transition: 0.4s;
+  }
+  .check .forgit .login button:hover {
+    background-color: #6363e6;
+    border: 0.8px solid black;
+  }
+  #Email {
+    margin-bottom: 20px;
+  }
+  #pass {
+    margin-bottom: 20px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 120px;
+  }
+  #face {
+    margin-bottom: 30px;
+  }
+  #Google {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1100px) {
+  section {
+    width: 100%;
+    height: 100vh;
+    padding: 0% 0%;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 120px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 5px;
+  }
+  .check .forgit .login button {
+    width: 100%;
+    margin: 2% 0%;
+    padding: 14px 0px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-color: #4e4ee2;
+    color: #ffff;
+    transition: 0.4s;
+  }
+  .check .forgit .login button:hover {
+    background-color: #6363e6;
+    border: 0.8px solid black;
+  }
+  #Email {
+    margin-bottom: 20px;
+  }
+  #pass {
+    margin-bottom: 20px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 120px;
+  }
+  #face {
+    margin-bottom: 30px;
+  }
+  #Google {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  section {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(252, 248, 219);
+  }
+  section .contenr {
+    width: 95%;
+    margin: 0% 0%;
+    padding: 0% 0% 0% 5%;
+  }
+  .welcome h2 {
+    font-size: 32px;
+  }
+  .check .forgit .checkbox label p {
+    margin-right: 120px;
+  }
+  .check .forgit .checkbox a h4 {
+    margin-bottom: 5px;
+  }
+  .check .forgit .login button {
+    width: 100%;
+    margin: 2% 0%;
+    padding: 14px 0px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-color: #4e4ee2;
+    color: #ffff;
+    transition: 0.4s;
+  }
+  .check .forgit .login button:hover {
+    background-color: #6363e6;
+    border: 0.8px solid black;
+  }
+  #Email {
+    margin-bottom: 20px;
+  }
+  #pass {
+    margin-bottom: 20px;
+  }
+  .no-acuon {
+    width: 99%;
+  }
+  .no-acuon P a {
+    margin-left: 120px;
+  }
+  #face {
+    margin-bottom: 30px;
+  }
+  #Google {
+    margin-bottom: 15px;
+  }
+}
