@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(255, 251, 218);
+}
+section .contenr {
+  width: 60%;
+  margin: 0% 20%;
+  padding: 0% 15%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+section .contenr .welcome {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 25px;
+}
+section .contenr .input {
+  display: flex;
+  flex-direction: column;
+}
+section .contenr .input #Email,
+#pass {
+  padding: 15px 8px;
+  outline: none;
+  border-radius: 9px;
+  border: 0.5px solid black;
+}
+#Email {
+  margin-bottom: 20px;
+}
+#pass {
+  margin-bottom: 15px;
+}
+label {
+  margin-bottom: 8px;
+}
+.check .forgit .checkbox {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0px;
+}
+.check .forgit .checkbox label p {
+  margin-right: 140px;
+}
+.check .forgit .checkbox input {
+  padding: 5px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+}
+.check .forgit .login button {
+  width: 100%;
+  padding: 14px 0px;
+  border-radius: 10px;
+  border: 0.5px solid black;
+  background-color: #4e4ee2;
+  color: #ffff;
+  transition: 0.4s;
+}
+.check .forgit .login button:hover {
+  background-color: #6363e6;
+  border: 0.8px solid black;
+}
+.mid {
+  display: flex;
+  align-items: center;
+  width: 93%;
+  margin: 0% 4%;
+}
+.mid span {
+  padding: 25px 20px;
+}
+.bottom-section .fac_gol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 0px;
+}
+.bottom-section .fac_gol a {
+  width: 100%;
+  padding: 13px 5px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+#face {
+  margin-bottom: 12px;
+  background-color: #4e4ee2;
+  color: #ffff;
+}
+#face i {
+  padding: 0px 15px;
+}
+#Google i {
+  padding: 0px 15px;
+}
+.bottom-section .fac_gol a:hover {
+  opacity: 0.85;
+}
+.no-acuon {
+  width: 99%;
+}
+.no-acuon P a {
+  margin-left: 160px;
+}
