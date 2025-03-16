@@ -48,7 +48,7 @@ body {
 .human-body svg.legs {
   margin-left: -46.5px;
   top: 205px;
-  z-index: 9999;
+  z-index: 99;
 }
 .human-body svg.hands {
   margin-left: -102.5px;
@@ -83,6 +83,7 @@ body {
   opacity: 0;
   top: 37px;
   left: -50px;
+  z-index: 100;
 }
 
 i {
@@ -92,6 +93,7 @@ i {
   position: fixed;
   top: 35px;
   left: 0px;
+  z-index: 101;
 }
 p {
   box-shadow: 13px 15px 38px #00000075;
@@ -105,6 +107,7 @@ p {
   background-color: rgb(247, 246, 246);
   border-radius: 20px;
   font-family: Arial, Helvetica, sans-serif;
+  z-index: 102;
 }
 
 #btn {
@@ -120,4 +123,5 @@ p {
   background-color: rgb(187, 184, 184);
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  z-index: 103;
 }
