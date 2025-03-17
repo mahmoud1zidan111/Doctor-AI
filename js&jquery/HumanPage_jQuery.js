@@ -32,7 +32,7 @@ $(document).ready(function () {
                   top: "340px",
                   opacity: 1,
                 },
-                400,
+                300,
                 function () {
                   $("#btn").on("click", function () {
                     $(".doc-ai").animate(
@@ -70,10 +70,25 @@ $(document).ready(function () {
                                   },
                                   400,
                                   function () {
-                                    $(this).hide();
-                                    let iconRight = `<i class="fa-solid fa-right-long"></i>`;
-                                    $(".human-body").after(
-                                      `<a href="#">${iconRight}</a>`
+                                    $(".human-body").css({
+                                      display: "block",
+                                    });
+                                    $(".human-body").animate(
+                                      {
+                                        top: 0,
+                                        opacity: 1,
+                                      },
+                                      300
+                                    );
+                                    $("#area").css({
+                                      display: "block",
+                                    });
+                                    $("#area").animate(
+                                      {
+                                        top: "210px",
+                                        opacity: 1,
+                                      },
+                                      300
                                     );
                                   }
                                 );
