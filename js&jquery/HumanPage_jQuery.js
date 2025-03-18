@@ -43,7 +43,7 @@ $(document).ready(function () {
                       },
                       300,
                       function () {
-                        $(this).hide();
+                        $(this).remove();
                         $("i.fa-stethoscope").animate(
                           {
                             left: "-40px",
@@ -52,7 +52,7 @@ $(document).ready(function () {
                           },
                           300,
                           function () {
-                            $(this).hide();
+                            $(this).remove();
                             $("p").animate(
                               {
                                 left: "-40px",
@@ -61,7 +61,7 @@ $(document).ready(function () {
                               },
                               300,
                               function () {
-                                $(this).hide();
+                                $(this).remove();
                                 $("#btn").animate(
                                   {
                                     left: "-40px",

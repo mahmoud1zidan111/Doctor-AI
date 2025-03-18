@@ -39,7 +39,6 @@ window.onload = function () {
         if (position) {
           data.innerHTML = position;
         }
-        console.log(position);
 
         head = position === "head";
         let script = document.querySelector(
@@ -62,7 +61,6 @@ window.onload = function () {
           document.body.appendChild(script);
         }
 
-        console.log("Head:", head);
         $("#btn-after").show(); // إظهار الزر فقط عند اختيار الرأس
       }
     });
