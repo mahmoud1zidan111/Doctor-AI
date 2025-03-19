@@ -1,9 +1,17 @@
 window.onload = function () {
   const pieces = document.querySelectorAll("svg");
   let data = document.getElementById("data");
-  let defaultColor = "#57c9d5";
   let activePiece = null;
-  let head;
+
+  let scriptPaths = {
+    head: "js&jquery/head_jQuery.js",
+    shoulder: "js&jquery/shoulder_jQuery.js",
+    arm: "js&jquery/arm_jQuery.js",
+    cheast: "js&jquery/cheast_jQuery.js",
+    stomach: "js&jquery/stomach_jQuery.js",
+    legs: "js&jquery/legs_jQuery.js",
+    hands: "js&jquery/hands_jQuery.js",
+  };
 
   pieces.forEach((piece) => {
     piece.addEventListener("click", function (event) {
@@ -11,53 +19,37 @@ window.onload = function () {
 
       if (!targetElement) return;
 
-      let currentColor = window
-        .getComputedStyle(targetElement)
-        .getPropertyValue("fill");
-
-      if (currentColor === defaultColor) {
-        data.innerHTML = "";
-      }
+      let position =
+        targetElement.getAttribute("data-position") ||
+        targetElement.parentElement?.getAttribute("data-position");
 
       if (activePiece && activePiece !== targetElement) {
-        activePiece.style.fill = defaultColor;
+        activePiece.style.fill = "#57c9d5";
       }
 
       if (activePiece === targetElement) {
-        targetElement.style.fill = defaultColor;
+        targetElement.style.fill = "#57c9d5";
         activePiece = null;
         data.innerHTML = "";
         $("#btn-after").hide();
+        removeOldScripts();
       } else {
         targetElement.style.fill = "#ff7d16";
         activePiece = targetElement;
 
-        let position =
-          targetElement.getAttribute("data-position") ||
-          targetElement.parentElement?.getAttribute("data-position");
+        data.innerHTML = position || "";
 
-        if (position) {
-          data.innerHTML = position;
-        }
-
-        head = position === "head";
-        let script = document.querySelector(
-          "script[src='js&jquery/head_jQuery.js']"
-        );
-
-        if (!head) {
-          if (script) {
-            script.remove();
-          }
+        removeOldScripts();
+        if (!scriptPaths[position]) {
           $("#btn-after").hide();
           return;
         }
 
-        if (head && !script) {
-          script = document.createElement("script");
-          script.src = "js&jquery/head_jQuery.js";
-          document.body.appendChild(script);
-        }
+        let script = document.createElement("script");
+        script.src = scriptPaths[position];
+        script.setAttribute("data-dynamic", "true");
+        document.body.appendChild(script);
+        console.log(`Loaded script for: ${position}`);
 
         $("#btn-after").show();
       }
@@ -65,4 +57,10 @@ window.onload = function () {
   });
 
   $("#btn-after").hide();
+
+  function removeOldScripts() {
+    document.querySelectorAll("script[data-dynamic]").forEach((script) => {
+      script.remove();
+    });
+  }
 };
