@@ -20,7 +20,7 @@ $(document).ready(function () {
     );
 
     $("#btn-after").on("click", function () {
-      window.location.href = "choose.html";
+      window.location.href = "head.html";
     });
   }
 });

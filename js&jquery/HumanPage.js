@@ -49,7 +49,8 @@ window.onload = function () {
         script.src = scriptPaths[position];
         script.setAttribute("data-dynamic", "true");
         document.body.appendChild(script);
-        console.log(`Loaded script for: ${position}`);
+        // console.log(`Loaded script for: ${position}`);
+        // console.log("Position Value:", position);
 
         $("#btn-after").show();
       }
