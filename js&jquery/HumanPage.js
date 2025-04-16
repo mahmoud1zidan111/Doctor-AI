@@ -3,7 +3,7 @@ window.onload = function () {
   let data = document.getElementById("data");
   let activePiece = null;
 
-  let scriptPaths = {
+  const scriptPaths = {
     head: "js&jquery/head_jQuery.js",
     shoulder: "js&jquery/shoulder_jQuery.js",
     arm: "js&jquery/arm_jQuery.js",
@@ -16,7 +16,6 @@ window.onload = function () {
   pieces.forEach((piece) => {
     piece.addEventListener("click", function (event) {
       let targetElement = event.target.closest("svg");
-
       if (!targetElement) return;
 
       let position =
@@ -33,35 +32,35 @@ window.onload = function () {
         data.innerHTML = "";
         $("#btn-after").hide();
         removeOldScripts();
+        location.reload();
       } else {
         targetElement.style.fill = "#ff7d16";
         activePiece = targetElement;
 
         data.innerHTML = position || "";
-
         removeOldScripts();
+
         if (!scriptPaths[position]) {
-          $("#btn-after").hide();
+          DeleteTheBtn();
           return;
         }
 
-        let script = document.createElement("script");
-        script.src = scriptPaths[position];
-        script.setAttribute("data-dynamic", "true");
-        document.body.appendChild(script);
-        // console.log(`Loaded script for: ${position}`);
-        // console.log("Position Value:", position);
+        let newScript = document.createElement("script");
+        newScript.src = scriptPaths[position];
+        newScript.setAttribute("data-dynamic", "true");
 
-        $("#btn-after").show();
+        newScript.onload = function () {
+          $("#btn-after").show();
+        };
+
+        document.body.appendChild(newScript);
       }
     });
   });
 
-  $("#btn-after").hide();
-
   function removeOldScripts() {
-    document.querySelectorAll("script[data-dynamic]").forEach((script) => {
-      script.remove();
-    });
+    document
+      .querySelectorAll("script[data-dynamic]")
+      .forEach((s) => s.remove());
   }
 };
