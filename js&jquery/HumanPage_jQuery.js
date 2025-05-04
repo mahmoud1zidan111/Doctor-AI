@@ -14,7 +14,7 @@ $(document).ready(function () {
       .css({ left: 0, opacity: 0 })
       .animate(
         {
-          left: "80px",
+          left: "70px",
           opacity: 1,
         },
         500,
@@ -23,7 +23,7 @@ $(document).ready(function () {
             .css({ left: 0, opacity: 0 })
             .animate(
               {
-                left: "45px",
+                left: "25px",
                 opacity: 1,
               },
               400,
@@ -32,15 +32,15 @@ $(document).ready(function () {
                   .css({ left: 0, opacity: 0 })
                   .animate(
                     {
-                      left: "20px",
+                      left: "25px",
                       opacity: 1,
                     },
                     400,
                     function () {
-                      $("p").after('<button id="btn">OK</button>');
+                      $("p").after('<button id="btn">Click here</button>');
                       $("#btn").css({ top: 0, opacity: 0 }).animate(
                         {
-                          top: "340px",
+                          top: "270px",
                           opacity: 1,
                         },
                         300
