@@ -7,14 +7,11 @@ $(document).ready(function () {
       "<p>Welcome, I hope you are well. Where is the pain?</p>"
     );
 
-    let iconHTML = `<i class="fa-solid fa-stethoscope"></i>`;
-    $("p").before("<span class='doc-ai'>Doctor AI</span>" + iconHTML);
-
     $(".doc-ai")
       .css({ left: 0, opacity: 0 })
       .animate(
         {
-          left: "70px",
+          left: "20px",
           opacity: 1,
         },
         500,
@@ -23,7 +20,7 @@ $(document).ready(function () {
             .css({ left: 0, opacity: 0 })
             .animate(
               {
-                left: "25px",
+                left: "15px",
                 opacity: 1,
               },
               400,
@@ -79,7 +76,7 @@ $(document).ready(function () {
 
   function exitAnimation() {
     return new Promise((resolve) => {
-      $(".doc-ai, i.fa-stethoscope, p, #btn").animate(
+      $(" p, #btn").animate(
         {
           left: "-40px",
           opacity: 0,
