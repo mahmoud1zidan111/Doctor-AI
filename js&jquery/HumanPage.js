@@ -4,13 +4,13 @@ window.onload = function () {
   let activePiece = null;
 
   const scriptPaths = {
-    head: "js&jquery/head_jQuery.js",
-    shoulder: "js&jquery/shoulder_jQuery.js",
-    arm: "js&jquery/arm_jQuery.js",
-    cheast: "js&jquery/cheast_jQuery.js",
-    stomach: "js&jquery/stomach_jQuery.js",
-    legs: "js&jquery/legs_jQuery.js",
-    hands: "js&jquery/hands_jQuery.js",
+    head: "js&jquery/allBody-js/head_jQuery.js",
+    shoulder: "js&jquery/allBody-js/shoulder_jQuery.js",
+    arm: "js&jquery/allBody-js/arm_jQuery.js",
+    cheast: "js&jquery/allBody-js/cheast_jQuery.js",
+    stomach: "js&jquery/allBody-js/stomach_jQuery.js",
+    legs: "js&jquery/allBody-js/legs_jQuery.js",
+    hands: "js&jquery/allBody-js/hands_jQuery.js",
   };
 
   pieces.forEach((piece) => {
