@@ -13,35 +13,71 @@
     <div class="contenr">
       <div class="assk">
         <div id="choose">
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="I feel pain in the frontal area of ​the brain.
+             I think it is a headache. Please tell me a painkiller and tell me something healthy And tell me about a treatment, 
+             and this is my personal responsibility, and I do not hold you responsible,
+              but tell me the solutions quickly and do not exceed 400 words in response,
+               and tell me in the end to go to the doctor I don't want you to start with this. This is not medical advice and should not replace a visit to the doctor."
+            onclick="gitData(this)"
+          >
             <img src="images/head/صداع امامي.png" alt="" />
             <p>Is the pain in the frontal region of the brain?</p>
           </div>
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="pain in half of the head"
+            onclick="gitData(this)"
+          >
             <img src="images/head/المخ صداع نصفي.png" alt="" />
             <p>Is the pain in half of the head?</p>
           </div>
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="pain in the back of the brain"
+            onclick="gitData(this)"
+          >
             <img src="images/head/صداع مخ خلفي.png" alt="" />
             <p>Is the pain in the back of the brain?</p>
           </div>
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="pain in the eye"
+            onclick="gitData(this)"
+          >
             <img src="images/head/الالم في العين.png" alt="" />
             <p>Is the pain in the eye?</p>
           </div>
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="pain in the jaw"
+            onclick="gitData(this)"
+          >
             <img src="images/head/الالم في الفك.png" alt="" />
             <p>Is the pain in the jaw?</p>
           </div>
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="pain in the throat area"
+            onclick="gitData(this)"
+          >
             <img src="images/head/التهاب الحلق.png" alt="" />
             <p>Is the pain in the throat area?</p>
           </div>
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="pain in the neck area"
+            onclick="gitData(this)"
+          >
             <img src="images/head/الالم في الرقبه.png" alt="" />
             <p>Is the pain in the neck area?</p>
           </div>
-          <div class="prodct">
+          <div
+            class="prodct"
+            data-position="pain in the vertebrae behind the neck part of the spine"
+            onclick="gitData(this)"
+          >
             <img src="images/head/فقرات الرقبه للعمود الفقري.png" alt="" />
             <p>
               Is the pain in the vertebrae behind the neck part of the spine?
@@ -51,5 +87,13 @@
       </div>
     </div>
     <script src="js&jquery/allBody-js/head_jQuery.js"></script>
+    <script>
+      async function gitData(element) {
+        const data = element.getAttribute("data-position");
+
+        await localStorage.setItem("pain", data);
+        window.location.href = "Response-AI.html";
+      }
+    </script>
   </body>
 </html>
