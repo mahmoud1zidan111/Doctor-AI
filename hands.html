@@ -13,35 +13,35 @@
     <div class="contenr">
       <div class="assk">
         <div id="choose">
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/صداع امامي.png" alt="" />
             <p>Is the pain in the frontal region of the brain?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/المخ صداع نصفي.png" alt="" />
             <p>Is the pain in half of the head?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/صداع مخ خلفي.png" alt="" />
             <p>Is the pain in the back of the brain?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/الالم في العين.png" alt="" />
             <p>Is the pain in the eye?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/الالم في الفك.png" alt="" />
             <p>Is the pain in the jaw?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/التهاب الحلق.png" alt="" />
             <p>Is the pain in the throat area?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/الالم في الرقبه.png" alt="" />
             <p>Is the pain in the neck area?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/head/فقرات الرقبه للعمود الفقري.png" alt="" />
             <p>
               Is the pain in the vertebrae behind the neck part of the spine?
@@ -51,5 +51,13 @@
       </div>
     </div>
     <script src="js&jquery/allBody-js/head_jQuery.js"></script>
+    <script>
+      async function gitData(element) {
+        const data = element.getAttribute("data-position");
+
+        await localStorage.setItem("pain", data);
+        window.location.href = "Response-AI.html";
+      }
+    </script>
   </body>
 </html>

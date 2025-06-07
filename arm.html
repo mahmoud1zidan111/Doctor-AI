@@ -13,35 +13,35 @@
     <div class="contenr">
       <div class="assk">
         <div id="choose">
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الالم في عضله الباي.png" alt="" />
             <p>Is the pain in the biceps muscle?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الالم في عضله التراي.png" alt="" />
             <p>Is the pain in the triceps muscle?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الام في عضلات الساعد.png" alt="" />
             <p>Is the pain in the forearm muscle?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الام في العضله الخلفيه للذراع.png" alt="" />
             <p>Is the pain in the posterior muscle of the arm?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الالم في عظام العضض.png" alt="" />
             <p>Is the pain in the bite bones?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الام في عظمه الساعد.png" alt="" />
             <p>Is the pain in the forearm bone?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الام في مفاصل الكتف.png" alt="" />
             <p>Is the pain in the shoulder joints?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/arm/الام في مفصل الكوع.png" alt="" />
             <p>Is there pain in the elbow joints?</p>
           </div>
@@ -49,5 +49,13 @@
       </div>
     </div>
     <script src="js&jquery/allBody-js/arm_jQuery.js"></script>
+    <script>
+      async function gitData(element) {
+        const data = element.getAttribute("data-position");
+
+        await localStorage.setItem("pain", data);
+        window.location.href = "Response-AI.html";
+      }
+    </script>
   </body>
 </html>

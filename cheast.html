@@ -13,27 +13,27 @@
     <div class="contenr">
       <div class="assk">
         <div id="choose">
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/cheast/الالم في عضله الصدر اليمني.png" alt="" />
             <p>Is the pain in the right chest muscle?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/cheast/الالم في عضله الصدر اليسري.png" alt="" />
             <p>Is the pain in the left chest muscle?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/cheast/هل تشعر بي حساسه في الرأتين.png" alt="" />
             <p>Do you feel sensitive in your lungs?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/cheast/هل الالم في القلب.png" alt="" />
             <p>Is the pain in the heart?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img src="images/cheast/الالم في شراين القلب.png" alt="" />
             <p>Is the pain in the heart arteries?</p>
           </div>
-          <div class="prodct">
+          <div class="prodct" data-position="" onclick="gitData(this)">
             <img
               src="images/cheast/هل هناك الم اثار كدمه في القفص الصدري.png"
               alt=""
@@ -44,5 +44,13 @@
       </div>
     </div>
     <script src="js&jquery/allBody-js/head_jQuery.js"></script>
+    <script>
+      async function gitData(element) {
+        const data = element.getAttribute("data-position");
+
+        await localStorage.setItem("pain", data);
+        window.location.href = "Response-AI.html";
+      }
+    </script>
   </body>
 </html>
