@@ -15,7 +15,7 @@ async function sendRequest() {
   let all = JSON.parse(localStorage.getItem("all"));
 
   const url =
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=" +
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" +
     all.a +
     all.c +
     all.s +
