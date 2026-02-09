@@ -1,6 +1,5 @@
 async function sendRequest() {
-  let ret = localStorage.getItem("pain");
-  // console.log("البيانات من localStorage:", ret);
+  const ret = localStorage.getItem("pain");
 
   if (!ret) {
     document.getElementById("response-text").textContent =
@@ -12,47 +11,31 @@ async function sendRequest() {
   document.getElementById("loader").style.display = "block";
   document.getElementById("response-text").textContent = "";
 
-  let all = JSON.parse(localStorage.getItem("all"));
+  // Vercel Function endpoint (API key is stored on Vercel, not in frontend)
+  const url = "https://doctor-ai-api-xi.vercel.app/api/generate";
 
-  const url =
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" +
-    all.a +
-    all.c +
-    all.s +
-    all.d +
-    all.n +
-    all.su +
-    all.x;
-
-  const bodyData = {
-    contents: [
-      {
-        parts: [
-          {
-            text: `${ret}`,
-          },
-        ],
-      },
-    ],
-  };
+  // IMPORTANT: our backend expects { text: "..." }
+  const bodyData = { text: ret };
 
   try {
     const response = await fetch(url, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(bodyData),
     });
 
+    // Read JSON whether success or error (so we can show error message)
+    const data = await response.json().catch(() => ({}));
+
     if (response.ok) {
-      const data = await response.json();
-      // console.log("البيانات المستلمة من API:", data);
       displayResponse(data);
-      localStorage.removeItem("all");
     } else {
-      document.getElementById("response-text").textContent =
-        "Request failed with status: " + response.status;
+      const msg =
+        data?.error?.message ||
+        data?.error ||
+        `Request failed with status: ${response.status}`;
+      document.getElementById("response-text").textContent = msg;
+      console.log("API error:", response.status, data);
     }
   } catch (error) {
     document.getElementById("response-text").textContent =
@@ -65,6 +48,7 @@ async function sendRequest() {
 
 function typeWriterHTML(html, element, speed = 20) {
   let i = 0;
+
   function type() {
     if (i <= html.length) {
       element.innerHTML = html.slice(0, i);
@@ -72,6 +56,7 @@ function typeWriterHTML(html, element, speed = 20) {
       setTimeout(type, speed);
     }
   }
+
   type();
 }
 
@@ -91,10 +76,13 @@ function displayResponse(data) {
       .map((part) => part.text || "")
       .join("\n\n");
 
+    // Requires marked library loaded on the page
     const html = marked.parse(markdownText);
 
     typeWriterHTML(html, responseText, 7);
   } else {
+    // Log full response to debug unexpected shapes
+    console.log("Unexpected response shape:", data);
     responseText.textContent = "No valid response data received.";
   }
 }
